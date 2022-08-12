@@ -11,20 +11,20 @@ stages:
     npmExecuteScripts: false
     karmaExecuteTests: false
   Acceptance:
-    cloudFoundryDeploy: false
-    cfApiEndpoint: ""
-    cfOrg: ""
-    cfSpace: ""
-    cfCredentialsId: ""
+    cloudFoundryDeploy: true
+    cfApiEndpoint: "https://api.cf.sap.hana.ondemand.com"
+    cfOrg: "LCAP_qa"
+    cfSpace: "qa"
+    cfCredentialsId: "crystal-cf-credential"
     uiVeri5ExecuteTests: false
   Compliance:
     sonarExecuteScan: false
   Release:
-    cloudFoundryDeploy: false
-    cfApiEndpoint: ""
-    cfOrg: ""
-    cfSpace: ""
-    cfCredentialsId: ""
+    cloudFoundryDeploy: true
+    cfApiEndpoint: "https://api.cf.sap.hana.ondemand.com"
+    cfOrg: "LCAP_qa"
+    cfSpace: "qa"
+    cfCredentialsId: "crystal-cf-credential"
     tmsUpload: false
 steps:
   artifactPrepareVersion:
