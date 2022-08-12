@@ -1,0 +1,73 @@
+{
+	"Credential": "cf",
+	"CF": {
+		"Target": "",
+		"Organization": "",
+		"Space": "",
+		"Deploy": {
+			"Description": "My SAP application",
+			"WebClient": {
+				"Runtime": "preview",
+				"URL": ""
+			},
+			"Destination": [
+				{
+					"CF": "LCAP2208Extension-app-srv",
+					"MDK": "../service/LCAP2208Extension/",
+					"URL": ""
+				}
+			]
+		}
+	},
+	"MobileService": {
+		"Type": "standard",
+		"AdminAPI": "",
+		"AppId": "lcap.LCAP2208Extension.MDK1vMore",
+		"Destination": []
+	},
+	"Onboarding": {
+		"Schema": "sapmobilesvcs",
+		"TimeZone": "UTC",
+		"URL": ""
+	},
+	"LCAP": {
+		"FullName": "LCAP2208Extension_MDK1vMore",
+		"Service": [
+			{
+				"mdk": "MDK1vMore/Services/service1.service",
+				"cap": {
+					"name": "LCAP2208ExtensionService",
+					"sourcePath": "srv/service.cds",
+					"path": "/service/LCAP2208Extension/",
+					"entryPath": "/service/LCAP2208Extension",
+					"destination": "LCAP2208Extension-app-srv",
+					"value": "0"
+				},
+				"links": [
+					{
+						"entity": "LCAP2208ExtensionService.ProductSet",
+						"files": [
+							"MDK1vMore/Pages/ProductSet/ProductSet_List.page"
+						]
+					},
+					{
+						"entity": "LCAP2208ExtensionService.comments",
+						"files": [
+							"MDK1vMore/Pages/comments/comments_List.page"
+						]
+					},
+					{
+						"entity": "LCAP2208ExtensionService.notes",
+						"files": [
+							"MDK1vMore/Pages/notes/notes_List.page"
+						]
+					}
+				]
+			}
+		],
+		"sourceTemplate": {
+			"id": "html5moduletemplates.basicSAPUI5ApplicationProjectModule",
+			"version": "1.40.12"
+		}
+	}
+}
